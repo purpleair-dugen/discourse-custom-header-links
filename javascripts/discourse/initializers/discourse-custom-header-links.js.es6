@@ -76,7 +76,7 @@ export default {
           );
         });
 
-        headerLinks.push(subMenuLinks);
+      
 
       api.decorateWidget(linksPosition, (helper) => {
         return helper.h("ul.custom-header-links", headerLinks);
