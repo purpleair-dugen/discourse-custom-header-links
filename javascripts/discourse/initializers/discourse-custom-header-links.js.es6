@@ -9,6 +9,7 @@ export default {
   initialize() {
     withPluginApi("0.8.20", (api) => {
       const customHeaderLinks = settings.Custom_header_links;
+      const customHeaderSubMenu = settings.Custom_header_SubMenus;
       if (!customHeaderLinks.length) {
         return;
       }
@@ -48,7 +49,7 @@ export default {
           headerLinks.push(
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h("a", anchorAttributes, linkText)
+              h("a", anchorAttributes, customHeaderSubMenu)
             )
           );
         });
