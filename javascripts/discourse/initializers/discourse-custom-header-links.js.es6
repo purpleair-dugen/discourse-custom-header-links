@@ -19,7 +19,29 @@ export default {
           ? "header-buttons:before"
           : "home-logo:after";
 
+      const subMenuLinks = [];
       const headerLinks = [];
+      
+      customHeaderSubMenu
+        .split("|")
+        .filter(Boolean)
+        .map((customHeaderSubMenuArray) => {
+        const [parent, subTitle, subLinkHref] = customHeaderSubMenuArray
+        .split(",")
+        .filter(Boolean)
+        .map((y) => y.trim());
+
+        const subLinkAttirubte = {
+            title: subTitle,
+            href: subLinkHref,
+        };
+
+        subMenuLinks.push(
+            h('li.subItem',
+            h("a",subLinkAttirubte, subTitle)
+            )
+        );
+      });
 
       customHeaderLinks
         .split("|")
@@ -49,10 +71,12 @@ export default {
           headerLinks.push(
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h("a", anchorAttributes, customHeaderSubMenu)
+              h("a", anchorAttributes, linkTitle)
             )
           );
         });
+
+        headerLinks.push(subMenuLinks);
 
       api.decorateWidget(linksPosition, (helper) => {
         return helper.h("ul.custom-header-links", headerLinks);
