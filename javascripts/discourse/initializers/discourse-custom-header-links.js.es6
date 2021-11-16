@@ -71,7 +71,7 @@ export default {
           headerLinks.push(
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h("a", anchorAttributes, linkTitle)
+              h("a", anchorAttributes, linkText)
             )
           );
         });
