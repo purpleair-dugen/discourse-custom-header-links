@@ -14,6 +14,8 @@ export default {
         return;
       }
 
+      console.log(customHeaderSubMenu);
+      
       const linksPosition =
         settings.links_position === "right"
           ? "header-buttons:before"
