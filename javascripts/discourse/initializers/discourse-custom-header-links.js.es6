@@ -71,7 +71,7 @@ export default {
           }
 
           headerLinks.push(
-            if(!customHeaderSubMenu.length)
+           
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
               h("a", anchorAttributes, linkText)
