@@ -39,7 +39,7 @@ export default {
         };
 
         subMenuLinks.push(
-            h('li.subItem',
+            h('div.dropdown-content',
             h("a",subLinkAttirubte, subTitle)
             )
         );
@@ -71,6 +71,7 @@ export default {
           }
 
           headerLinks.push(
+            if(!customHeaderSubMenu.length)
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
               h("a", anchorAttributes, linkText)
