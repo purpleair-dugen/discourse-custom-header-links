@@ -28,7 +28,7 @@ export default {
         .split("|")
         .filter(Boolean)
         .map((customHeaderSubMenuArray) => {
-        const [subParent, subTitle, subLinkHref] = customHeaderSubMenuArray
+        const [parent, subTitle, subLinkHref] = customHeaderSubMenuArray
         .split(",")
         .filter(Boolean)
         .map((y) => y.trim());
@@ -36,7 +36,6 @@ export default {
         const subLinkAttirubte = {
             title: subTitle,
             href: subLinkHref,
-            parent: subParent,
         };
 
         subMenuLinks.push(
@@ -45,18 +44,6 @@ export default {
             )
         );
       });
-
-function grabChildren(linkText){
-  const childLinks = [];
-subMenuLinks.forEach(p => {
-  if(p.parent == linkText)
-  {
-    childLinks.push(p);
-  }
-})
-
-return childLinks;
-}
 
       customHeaderLinks
         .split("|")
@@ -87,8 +74,7 @@ return childLinks;
            
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h(`div.dropdown`, anchorAttributes, linkText 
-              )
+              h("a", anchorAttributes, linkText)
             )
           );
         });
