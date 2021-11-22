@@ -54,10 +54,8 @@ subMenuLinks.forEach(p => {
     childLinks.push(p);
   }
 })
-
-  
-  
-return childLinks;
+ 
+console.log(childLinks);
 }
 
       customHeaderLinks
@@ -86,7 +84,7 @@ return childLinks;
           }
 
         
-       console.log(grabChildren(linksText));  
+      
         
           headerLinks.push(
            
