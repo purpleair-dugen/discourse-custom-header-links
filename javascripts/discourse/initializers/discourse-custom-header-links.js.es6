@@ -87,8 +87,7 @@ return childLinks;
            
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
-              h(`div.dropdown`,
-                 h('a', childLinks(linkText))
+              h(`div.dropdown`, anchorAttributes, linkText 
               )
             )
           );
