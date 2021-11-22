@@ -83,7 +83,7 @@ console.log(childLinks);
             anchorAttributes.target = linkTarget;
           }
 
-        
+        grabChildren(linkText);
       
         
           headerLinks.push(
