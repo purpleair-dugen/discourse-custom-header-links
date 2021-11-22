@@ -47,10 +47,14 @@ export default {
       });
 
 function grabChildren(linkText){
+  console.log("This is the linkText:" + linkText);
+  
   const childLinks = [];
 subMenuLinks.forEach(p => {
+  
   if(p.parent == linkText)
   {
+    console.log("This is the Parent:" + p.parent);
     childLinks.push(p);
   }
 })
