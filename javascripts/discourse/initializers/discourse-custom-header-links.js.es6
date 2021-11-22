@@ -47,12 +47,12 @@ export default {
       });
 
 function grabChildren(linkText){
-  console.log("This is the linkText:" + linkText);
+  console.log("This is the linkText: " + linkText);
   
   const childLinks = [];
   console.log(subMenuLinks);
 subMenuLinks.forEach(p => {
-    console.log("This is the Parent:" + p.parent);
+    console.log("This is the Parent: " + p);
   if(p.parent == linkText)
   {
   
@@ -60,7 +60,7 @@ subMenuLinks.forEach(p => {
   }
 })
  
-console.log(childLinks);
+console.log("This is the ChildLinks: " + childLinks);
 }
 
       customHeaderLinks
