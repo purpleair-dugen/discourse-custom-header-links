@@ -48,19 +48,15 @@ export default {
 
 function grabChildren(linkText){
   console.log("This is the linkText: " + linkText);
-  
   const childLinks = [];
-  Console.log("VVVVsubmenulink arrayVVVVVV");
   console.log(subMenuLinks);
+  
 subMenuLinks.forEach(p => {
-  
-  
-    console.log("This is the Parent: " + p);
+console.log("This is the Parent: " + p);
   
 
   if(p.parent == linkText)
-  {
-  
+  {  
     childLinks.push(p);
   }
 })
