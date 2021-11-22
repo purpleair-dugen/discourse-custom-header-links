@@ -55,6 +55,8 @@ subMenuLinks.forEach(p => {
   }
 })
 
+  
+  
 return childLinks;
 }
 
@@ -83,12 +85,15 @@ return childLinks;
             anchorAttributes.target = linkTarget;
           }
 
+        
+       console.log(grabChildren(linksText));  
+        
           headerLinks.push(
            
             h(
               `li.headerLink${deviceClass}${keepOnScrollClass}${linkClass}`,
               h(`div.dropdown`,
-                 h('a', childLinks(linkText))
+                 h('a', anchorAttributes, linkText)
               )
             )
           );
