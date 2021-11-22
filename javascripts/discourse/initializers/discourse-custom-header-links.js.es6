@@ -50,9 +50,16 @@ function grabChildren(linkText){
   console.log("This is the linkText: " + linkText);
   
   const childLinks = [];
+  Console.log("VVVVsubmenulink arrayVVVVVV");
   console.log(subMenuLinks);
 subMenuLinks.forEach(p => {
+  
+  
     console.log("This is the Parent: " + p);
+  
+  p.foreach(c => {
+  console.log("This is c: " + c);
+  })
   if(p.parent == linkText)
   {
   
