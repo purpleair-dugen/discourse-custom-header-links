@@ -53,10 +53,7 @@ function grabChildren(linkText){
   
 subMenuLinks.forEach(p => {
 console.log("This is the Parent: " + p);
-  p.forEach(ch => {
-    console.log(ch);
-  })
-
+ 
   if(p.parent == linkText)
   {  
     childLinks.push(p);
